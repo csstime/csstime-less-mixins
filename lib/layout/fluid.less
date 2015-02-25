@@ -1,0 +1,58 @@
+@layout-width-fluid: 100%;
+@layout-width-fluidItem: auto;
+@layout-gutter-fluidItem: 20px;
+@layout-horizontalAlign-fluidItem: left;
+@layout-verticalAlign-fluidItem: top;
+@layout-amount-fluidColumnSpan: 1;
+@layout-amount-fluidTotalColumns: 12;
+
+/**
+ * Light grid with fluid items
+ */
+.mixin-layout-fluid (
+	@width: @layout-width-fluid,
+	@horizontalAlign: @layout-horizontalAlign-fluidItem) {
+	display: block;
+
+	box-sizing: border-box;
+	width: @width;
+
+	list-style: none;
+
+	text-align: @horizontalAlign;
+}
+
+.mixin-layout-fluidItem (
+	@width: @layout-width-fluidItem,
+	@verticalAlign: @layout-verticalAlign-fluidItem) {
+	display: inline-block;
+
+	box-sizing: border-box;
+	width: @width;
+
+	vertical-align: @verticalAlign;
+}
+
+.mixin-layout-fluidColumn (
+	@columnSpan: @layout-amount-fluidColumnSpan,
+	@totalColumns: @layout-amount-fluidTotalColumns,
+	@verticalAlign: @layout-verticalAlign-fluidItem) {
+	.mixin-layout-fluidItem(100% * @columnSpan / @totalColumns, @verticalAlign);
+}
+
+.mixin-layout-fluidItem-gutterHorizontal (
+	@gutter: @layout-gutter-fluidItem) {
+	margin-right: @gutter / 2;
+	margin-left: @gutter / 2;
+}
+
+.mixin-layout-fluidItem-gutterVertical (
+	@gutter: @layout-gutter-fluidItem) {
+	padding-top: @gutter / 2;
+	padding-bottom: @gutter / 2;
+}
+
+.mixin-layout-fluidItem-gutter (@gutter: @layout-gutter-fluidItem) {
+	.mixin-layout-fluidItem-gutterVertical(@gutter);
+	.mixin-layout-fluidItem-gutterHorizontal(@gutter);
+}

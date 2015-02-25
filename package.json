@@ -1,0 +1,12 @@
+{
+	"name": "csstime-less-mixins",
+	"version": "1.0.0",
+	"author": "Julia Rechkunova",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:csstime/csstime-less-mixins.git"
+	},
+	"engines": {
+		"node": ">=0.10"
+	}
+}

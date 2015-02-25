@@ -1,2 +1,2 @@
 # csstime-less-mixins
-Less mixins
+Csstime Less mixins
