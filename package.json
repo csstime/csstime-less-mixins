@@ -8,7 +8,9 @@
 	},
 	"keywords": [
 		"less",
-		"mixins"
+		"mixins",
+		"styles",
+		"css"
 	],
 	"engines": {
 		"node": ">=0.10"
