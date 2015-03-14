@@ -6,6 +6,10 @@
 		"type": "git",
 		"url": "git@github.com:csstime/csstime-less-mixins.git"
 	},
+	"keywords": [
+		"less",
+		"mixins"
+	],
 	"engines": {
 		"node": ">=0.10"
 	}
